@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const url = process.env.NODE_ENV === 'development' ? 'http://localhost:8000' : '';
+const url = process.env.NODE_ENV === 'development' ? 'http://localhost:8000' : 'https://page-sauce-backend.herokuapp.com';
 
 export async function register_user(data) {
     const response = await axios.post(`${url}/auth/register/`, {
