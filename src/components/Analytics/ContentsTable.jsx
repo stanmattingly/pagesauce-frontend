@@ -14,7 +14,7 @@ function ContentsTable({ contents, showAll }) {
 
     useEffect(() => {
         if (contents.length >= 1) {
-            setVisibleContents(showAll ? contents : contents.slice(0, 1))
+            setVisibleContents(showAll ? contents : contents.slice(0, 3))
         }
     }, [contents])
 
