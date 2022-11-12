@@ -13,12 +13,21 @@ import {
 import './scss/Navigation.scss';
 
 import WebsiteSelector from "./WebsiteSelector";
+import { Api } from "../../Api";
 
 function AuthNavigation({selectedWebsite, setSelectedWebsite, openNewWebsiteDialog, signedIn, setSignedIn}) {
-    console.log(signedIn)
+
     function handleSignOut() {
         localStorage.setItem("refresh-token", null);
         setSignedIn(false);
+    }
+
+    const api = new Api();
+
+    function handleIntegrateClick() {
+        api.getSmartAddToken(selectedWebsite).then(token => {
+            window.open(token.url_build, '_blank');
+        });
     }
 
     return (
@@ -32,7 +41,7 @@ function AuthNavigation({selectedWebsite, setSelectedWebsite, openNewWebsiteDial
                     {signedIn &&
                         <Stack direction="row" gap={5}>
                             <Button>Dashboard</Button>
-                            <Button>Conversions</Button>
+                            <Button onClick={handleIntegrateClick}>Add Smart Elements</Button>
                             <Button>Settings</Button>
                             <Button onClick={handleSignOut}>Sign Out</Button>
                         </Stack>
