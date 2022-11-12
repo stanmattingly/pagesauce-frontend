@@ -25,7 +25,7 @@ function VerifyWebsite({ selectedWebsite, verified, setVerified }) {
 
     useEffect(() => {
         api.getWesbite(selectedWebsite).then(website => {
-            setScript(`<script src="https://cdn.jsdelivr.net/gh/stanmattingly/smart-content-integration/smart-39.js" data-smart-auth-id="${website.token.key}" />`)
+            setScript(`<script src="https://cdn.jsdelivr.net/gh/stanmattingly/smart-content-integration/smart-51.js" data-smart-auth-id="${website.token.key}" />`)
             setVerified(website.verified_at ? true : false)
         })
     }, [])
