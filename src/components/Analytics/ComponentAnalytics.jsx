@@ -99,7 +99,7 @@ function ComponentAnalytics({ component }) {
             <CardActions sx={{ justifyContent: 'space-between' }}>
                 <Button size="small" onClick={openAddContentDialog} startIcon={<Edit/>}>Content</Button>
                 <Button size="small" onClick={openCreateConversion} startIcon={<Iso/>}>Conversions</Button>
-                <Button size="small" onClick={handleHideShowAll} startIcon={showAllContents ? <VisibilityOff/> : <Visibility/>} disabled={contents.length < 2}>
+                <Button size="small" onClick={handleHideShowAll} startIcon={showAllContents ? <VisibilityOff/> : <Visibility/>} disabled={contents.length < 4}>
                     {showAllContents ? 'Hide' : 'Show All'}
                 </Button>
             </CardActions>

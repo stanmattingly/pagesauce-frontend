@@ -22,7 +22,7 @@ function ContentsTable({ contents, showAll }) {
         if (showAll) {
             setVisibleContents(contents)
         } else {
-            setVisibleContents(contents.slice(0, 1))
+            setVisibleContents(contents.slice(0, 3))
         }
     }, [showAll])
 
