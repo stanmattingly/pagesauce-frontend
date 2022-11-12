@@ -31,7 +31,7 @@ function Dashboard({ selectedWebsite }) {
             <Grid item xs={12} sm={6} md={6}>
                 <Onboarding selectedWebsite={selectedWebsite} verified={verified} setVerified={setVerified} components={components} setComponents={setComponents}/>
             </Grid>
-            <Grid item xs={12} sm={6} md={6}>
+            <Grid item xs={12} sm={6} md={6} sx={{mb:6}}>
                 <Grid container spacing={2}>
                     {components.map((component, key) => (
                         <Grid item xs={12} sm={12} md={12} key={key}>
