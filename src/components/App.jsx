@@ -17,7 +17,7 @@ import Login from './Auth/Login';
 import AddWebsiteDialog from './Dialogs/AddWebsiteDialog';
 
 function App() {
-    const [signedIn, setSignedIn] = useState(localStorage.getItem("refresh-token") !== "null");
+    const [signedIn, setSignedIn] = useState(localStorage.getItem("refresh-token") !== "null" && localStorage.getItem("refresh-token") !== null);
     const [selectedWebsite, setSelectedWebsite] = useState(localStorage.getItem("selected-website") ? localStorage.getItem("selected-website") : '');
 
     const [newWebsiteName, setNewWebsiteName] = useState('');
