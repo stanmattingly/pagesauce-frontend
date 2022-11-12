@@ -2,7 +2,7 @@ import axios from 'axios'
 
 export class Api {
     constructor() {
-        this.url = process.env.NODE_ENV === 'development' ? 'http://localhost:8000/api' : 'https://page-sauce-backend.herokuapp.com/api';
+        this.url = process.env.NODE_ENV === 'development' ? 'http://localhost:8000/api' : 'https://api.pagesauce.io/api';
         this.accessToken = localStorage.getItem("access-token");
         this.refreshToken = localStorage.getItem("refresh-token");
         this.user = [];
@@ -164,7 +164,7 @@ export class Api {
     async getSmartAddToken(website_uuid) {
         await this.refreshAccessToken();
         const response = await axios.post(
-            process.env.NODE_ENV === 'development' ? 'http://localhost:8000/auth/smart-add-tokens/' : 'https://page-sauce-backend.herokuapp.com/auth/smart-add-tokens/', {
+            process.env.NODE_ENV === 'development' ? 'http://localhost:8000/auth/smart-add-tokens/' : 'https://api.pagesauce.io/auth/smart-add-tokens/', {
                 'website_uuid': website_uuid,
             },
             {
