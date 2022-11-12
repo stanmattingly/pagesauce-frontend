@@ -1,0 +1,16 @@
+@import "./Globals.scss";
+
+.CheckoutButton {
+    margin-top: 30px;
+    border: none;
+    display: inline-block;
+    font-size: 1em;
+    padding: 1em 2em;
+    width: 100%;
+    border-radius: 50px;
+    font-family: $base-font;
+    font-weight: 700;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}

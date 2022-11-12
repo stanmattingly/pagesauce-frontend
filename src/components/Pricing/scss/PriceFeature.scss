@@ -1,0 +1,13 @@
+.PriceFeature {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+
+    &__icon {
+        margin-right: 5px;
+    }
+
+    &__description {
+        line-height: 1.15em;
+    }
+}

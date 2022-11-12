@@ -1,0 +1,28 @@
+.PricingItem {
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid rgb(209, 206, 206);
+    padding: 15px 40px 15px 40px;
+    box-shadow: rgba(60, 64, 67, 0) 0px 1px 2px 0px, rgba(60, 64, 67, 0) 0px 2px 6px 2px;
+    cursor: pointer;
+    width: 300px;
+
+    &--selected { 
+        border: 2px solid rgb(0, 0, 0);
+    }
+
+    &__name {
+        font-size: 20px;
+        font-weight: 700;
+        margin: 20px 0 5px;
+    }
+
+    &__price {
+        font-size: 48px;
+        margin-bottom: 5px;
+    }
+
+    &__description {
+        margin-bottom: 40px;
+    }
+}
