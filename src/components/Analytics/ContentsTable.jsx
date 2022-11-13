@@ -6,6 +6,7 @@ import {
     TableRow,
     TableCell,
     Typography,
+    Tooltip,
 } from "@mui/material"
 import { useEffect, useState } from "react";
 
@@ -41,7 +42,9 @@ function ContentsTable({ contents, showAll }) {
                     {visibleContents.map((content, index) => (
                         <TableRow key={index}>
                             <TableCell sx={{maxWidth: 125, minWidth: 125}}>
-                                <Typography variant="body2" noWrap={true}>{content.text}</Typography>
+                                <Tooltip title={content.text}>
+                                    <Typography variant="body2" noWrap={true}>{content.text}</Typography>
+                                </Tooltip>
                             </TableCell>
                             <TableCell align="right">{content.considerations}</TableCell>
                             <TableCell align="right">{content.clicks}</TableCell>
