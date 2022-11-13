@@ -26,7 +26,7 @@ function VerifyWebsite({ selectedWebsite, verified, setVerified }) {
     useEffect(() => {
         if (selectedWebsite) {
             api.getWesbite(selectedWebsite).then(website => {
-                setScript(`<script src="https://api.pagesauce.io/static/core/js/smart.js" data-smart-auth-id="${website.token.key}"><script/>`)
+                setScript(`<script src="https://api.pagesauce.io/static/core/js/smart.js" data-smart-auth-id="${website.token.key}"></script>`)
                 setVerified(website.verified_at ? true : false)
             })
         }
