@@ -23,7 +23,7 @@ function Dashboard({ selectedWebsite }) {
     }
 
     useEffect(() => {
-        api.getComponents(selectedWebsite).then(results => setComponents(results))
+            api.getComponents(selectedWebsite).then(results => setComponents(results))
     }, [selectedWebsite])
 
      return (

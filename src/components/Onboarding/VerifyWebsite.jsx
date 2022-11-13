@@ -24,12 +24,15 @@ function VerifyWebsite({ selectedWebsite, verified, setVerified }) {
     const api = new Api();
 
     useEffect(() => {
-        api.getWesbite(selectedWebsite).then(website => {
-            setScript(`<script src="https://api.pagesauce.io/static/core/js/smart.js" data-smart-auth-id="${website.token.key}"><script/>`)
-            setVerified(website.verified_at ? true : false)
-        })
+        if (selectedWebsite) {
+            api.getWesbite(selectedWebsite).then(website => {
+                setScript(`<script src="https://api.pagesauce.io/static/core/js/smart.js" data-smart-auth-id="${website.token.key}"><script/>`)
+                setVerified(website.verified_at ? true : false)
+            })
+        }
+
     }, [])
- 
+
     function handleCopy() {
         navigator.clipboard.writeText(script);
         setCopied(true);
@@ -52,7 +55,7 @@ function VerifyWebsite({ selectedWebsite, verified, setVerified }) {
     }
 
     return (
-        <Card elevation={0} sx={{margin: 0, padding: 0}}>
+        <Card elevation={0} sx={{ margin: 0, padding: 0 }}>
             <CardHeader
                 title="Welcome!"
                 subheader="Let's verify and integrate your website."
@@ -65,16 +68,16 @@ function VerifyWebsite({ selectedWebsite, verified, setVerified }) {
                     multiline
                     rows={6}
                     fullWidth
-                    sx={{marginTop: "20px"}}
+                    sx={{ marginTop: "20px" }}
                     disabled
                 />
             </CardContent>
             <CardActions sx={{ justifyContent: 'space-between', mt: 0 }}>
-                <Button onClick={handleCopy}>{copied ? 'Copied!' : 'Copy'}</Button>  
-                <Button 
-                    onClick={handleVerify} 
-                    endIcon={<CheckBox/>} 
-                    variant={"contained"} 
+                <Button onClick={handleCopy}>{copied ? 'Copied!' : 'Copy'}</Button>
+                <Button
+                    onClick={handleVerify}
+                    endIcon={<CheckBox />}
+                    variant={"contained"}
                     color={'success'}
                 >
                     {verifyButtonText}
