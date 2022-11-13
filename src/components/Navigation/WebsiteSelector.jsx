@@ -12,7 +12,7 @@ function WebsiteSelector({ selectedWebsite, setSelectedWebsite, openNewWebsiteDi
     }, [])
 
     useEffect(() => {
-        if (websites.length > 0 && !selectedWebsite) {
+        if (websites.length > 0 && websites.filter(website => website.universal_id === selectedWebsite).length < 1) {
             setSelectedWebsite(websites[0].universal_id);
         }
     }, [websites])

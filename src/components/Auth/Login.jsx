@@ -13,7 +13,9 @@ function Login() {
     const handleSubmit = (event) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
-        login(data).then(user => window.location.assign('/'));
+        login(data).then(user => {
+            window.location.assign('/')
+        });
     };
     return (
         <Container maxWidth="sm">

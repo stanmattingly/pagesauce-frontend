@@ -29,5 +29,5 @@ export async function login(data) {
     localStorage.setItem('access-token', response.data.access);
     localStorage.setItem('refresh-token', response.data.refresh);
     
-    return response;
+    return response.data;
 }
