@@ -12,6 +12,7 @@ import {
 import { register_user } from '../../Auth';
 
 function Register() {
+    document.title = `${document.title} | Sign Up`;
     const handleSubmit = (event) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);

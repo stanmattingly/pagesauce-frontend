@@ -12,6 +12,8 @@ import Login from "../Auth/Login";
 import Onboarding from "../Onboarding/Onboarding";
 
 function Dashboard({ selectedWebsite }) {
+    document.title = `${document.title} | Dashboard`;
+
     const [components, setComponents] = useState([]);
     const [verified, setVerified] = useState(false)
     const api = new Api();

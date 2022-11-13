@@ -78,7 +78,7 @@ function Onboarding({selectedWebsite, verified, setVerified, components, setComp
         },
         {
             label: 'Create your first Smart Elements',
-            description: '',
+            description: 'Buttons on your site will not click through. Hold the `Shift` key to navigate your site as normal.',
             form: <Button variant="outlined" onClick={handleIntegrateClick}>Add Smart Elements</Button>,
             action: handleNext,
             buttonText: "Next",
