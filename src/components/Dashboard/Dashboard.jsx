@@ -11,7 +11,7 @@ function Dashboard({ selectedWebsite }) {
     const api = new Api();
 
     useEffect(() => {
-        document.title = `${document.title} | Dashboard`;
+        document.title = `PageSauce.io | Dashboard`;
     }, []);
 
     useEffect(() => {

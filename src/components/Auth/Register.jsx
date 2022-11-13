@@ -14,7 +14,7 @@ import { useEffect } from "react";
 
 function Register() {
     useEffect(() => {
-        document.title = `${document.title} | Sign Up`;
+        document.title = `PageSauce.io | Sign Up`;
     }, []);
     const handleSubmit = (event) => {
         event.preventDefault();

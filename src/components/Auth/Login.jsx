@@ -12,7 +12,7 @@ import { useEffect } from "react";
 
 function Login() {
     useEffect(() => {
-        document.title = `${document.title} | Sign In`;
+        document.title = `PageSauce.io | Sign In`;
     }, []);
 
     const handleSubmit = (event) => {
