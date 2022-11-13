@@ -36,6 +36,7 @@ function AddContentForm({component, contents, setContents}) {
                 fullWidth
                 variant="standard"
                 onKeyDown={handleContentEnter}
+                helperText="Press 'Enter' to save"
             />
             <Stack direction="row" sx={{ mb: 1, mt: 1, flexWrap: 'wrap', gap: 1}}>
                 {contents.map((content, index) => <Chip label={content.text} key={index} data-index={index} onDelete={handleContentDelete}/>)}
