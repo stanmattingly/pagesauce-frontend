@@ -12,8 +12,6 @@ import Login from "../Auth/Login";
 import Onboarding from "../Onboarding/Onboarding";
 
 function Dashboard({ selectedWebsite }) {
-    document.title = `${document.title} | Dashboard`;
-
     const [components, setComponents] = useState([]);
     const [verified, setVerified] = useState(false)
     const api = new Api();
@@ -23,6 +21,10 @@ function Dashboard({ selectedWebsite }) {
             window.open(token.url_build, '_blank');
         });
     }
+
+    useEffect(() => {
+        document.title = `${document.title} | Dashboard`;
+    }, []);
 
     useEffect(() => {
             api.getComponents(selectedWebsite).then(results => setComponents(results))

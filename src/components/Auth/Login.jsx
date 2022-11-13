@@ -10,7 +10,9 @@ import {
 import { login } from '../../Auth';
 
 function Login() {
-    document.title = `${document.title} | Sign In`;
+    useEffect(() => {
+        document.title = `${document.title} | Sign In`;
+    }, []);
 
     const handleSubmit = (event) => {
         event.preventDefault();
