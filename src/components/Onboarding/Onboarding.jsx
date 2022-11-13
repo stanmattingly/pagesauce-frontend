@@ -41,7 +41,7 @@ function Onboarding({selectedWebsite, verified, setVerified, components, setComp
                 localStorage.setItem('onboarding-step', 0);
             }
         }
-    }, []);
+    }, [selectedWebsite]);
 
     useEffect(() => {
         if(verified) {
