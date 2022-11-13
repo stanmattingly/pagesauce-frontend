@@ -1,26 +1,14 @@
-import { Grid, Button, Paper } from "@mui/material"
-
-import {
-    AddCircle,
-} from '@mui/icons-material'
+import { Grid } from "@mui/material"
 
 import ComponentAnalytics from "../Analytics/ComponentAnalytics";
-import VerifyWebsite from "../Onboarding/VerifyWebsite";
 import { useEffect, useState } from "react";
 import { Api } from "../../Api";
-import Login from "../Auth/Login";
 import Onboarding from "../Onboarding/Onboarding";
 
 function Dashboard({ selectedWebsite }) {
     const [components, setComponents] = useState([]);
     const [verified, setVerified] = useState(false)
     const api = new Api();
-
-    function handleIntegrateClick() {
-        api.getSmartAddToken(selectedWebsite).then(token => {
-            window.open(token.url_build, '_blank');
-        });
-    }
 
     useEffect(() => {
         document.title = `${document.title} | Dashboard`;

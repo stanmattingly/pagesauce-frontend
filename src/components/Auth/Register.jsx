@@ -10,6 +10,7 @@ import {
     Link
 } from '@mui/material';
 import { register_user } from '../../Auth';
+import { useEffect } from "react";
 
 function Register() {
     useEffect(() => {
